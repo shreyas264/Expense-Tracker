@@ -9,6 +9,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Income from './Components/Incomes/Income';
 import Expenses from './Components/Expenses/Expenses';
 import { useGlobalContext } from './context/globalContext';
+import Transaction from './Components/Transactions/Transaction';
 
 function App() {
   const [active, setActive] = useState(1);
@@ -21,7 +22,7 @@ function App() {
       case 1:
         return <Dashboard/>
       case 2:
-        return <Dashboard/>
+        return <Transaction/>
       case 3:
         return <Income/>
       case 4:
@@ -61,7 +62,7 @@ const AppStyled = styled.div`
     overflow: auto;
     overflow-x: hidden;
     &::-webkit-scrollbar{
-      width:0;
+      width:6px;
     }
   }
 `;

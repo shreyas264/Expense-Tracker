@@ -1,0 +1,61 @@
+import React from 'react'
+
+import styled from 'styled-components'
+import { InnerLayout } from '../../styles/Layouts';
+import { useGlobalContext } from '../../context/globalContext';
+
+function Transaction() {
+
+    const { viewTransactionHistory } = useGlobalContext()
+
+    const [...history] = viewTransactionHistory()
+
+  return (
+    <TransactionStyled>
+        <InnerLayout>
+        <h2>Transaction History</h2>
+        {history.map((item) => {
+            const {_id, title, amount, type} = item 
+            return(
+                <div key={_id} className='history-item'>
+                    <p style={{
+                        color: type === 'expense' ? 'red' : 'var(--color-green)'
+                    }}>
+                        {title}
+                    </p>
+
+                    <p style={{
+                        color: type === 'expense' ? 'red' : 'var(--color-green)'
+                    }}>
+                        {
+                            type === 'expense' ? `-₹${amount}` : `+₹${amount}`
+                        }
+                    </p>
+                </div>
+            )
+        })}
+        </InnerLayout>
+        
+    </TransactionStyled>
+    
+  )
+}
+
+const TransactionStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .history-item{
+        background: #FCF6F9;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 1px 15px rgba(0,0,0,0.06);
+        padding: 1rem;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 50%;
+    }
+`;
+
+export default Transaction

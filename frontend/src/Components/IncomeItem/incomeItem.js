@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { bitcoin, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, rupee, stocks, takeaway, trash, tv, users, yt } from '../../utils/icons';
 import Button from '../Button/Button';
+import { dateFormat } from '../../utils/dateFormat';
 
 function IncomeItem({
     id,
@@ -46,7 +47,7 @@ function IncomeItem({
                 return food;
             case 'health':
                 return medical;
-            case 'subscription':
+            case 'subscriptions':
                 return tv;
             case 'takeaways':
                 return takeaway;
@@ -72,13 +73,13 @@ function IncomeItem({
             <div className='inner-content'>
                 <div className='text'>
                     <p>{rupee} {amount}</p>
-                    <p>{calender} {date}</p>
+                    <p>{calender} {dateFormat(date)}</p>
                     <p>
                         {comment}
                         {description}
                     </p>
                 </div>
-                <div className='btn-con'>
+                <div className='bt n-con'>
                     <Button
                         icon={trash}
                         bPad={'1rem'}
