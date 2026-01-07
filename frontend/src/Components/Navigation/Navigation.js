@@ -3,7 +3,7 @@ import styled from "styled-components";
 import avatar from '../../img/avatar.png'
 import { menuItems } from "../../utils/menuItems";
 import { signout } from "../../utils/icons";
-import { useGlobalContext} from '../../context/globalContext'
+import { useGlobalContext} from '../../context/GlobalContext'
 
 function Navigation({active, setActive}) {
      

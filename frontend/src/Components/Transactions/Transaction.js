@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 import { InnerLayout } from '../../styles/Layouts';
-import { useGlobalContext } from '../../context/globalContext';
+import { useGlobalContext } from '../../context/GlobalContext';
 
 function Transaction() {
 

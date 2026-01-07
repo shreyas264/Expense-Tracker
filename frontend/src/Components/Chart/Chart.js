@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGlobalContext} from '../../context/globalContext'
+import { useGlobalContext} from '../../context/GlobalContext'
 import { dateFormat} from '../../utils/dateFormat'
 
 

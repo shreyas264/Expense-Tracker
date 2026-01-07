@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { InnerLayout } from '../../styles/Layouts';
 import Chart from '../Chart/Chart';
 import { rupee } from '../../utils/icons'
-import { useGlobalContext } from '../../context/globalContext';
+import { useGlobalContext } from '../../context/GlobalContext';
 import History from '../History/History';
 
 function Dashboard() {
